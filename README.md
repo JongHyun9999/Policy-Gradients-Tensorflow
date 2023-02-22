@@ -61,3 +61,7 @@ Finally, we want to compute in Gradient Descent method the following expression:
 
 $$\theta^{'} \leftarrow \theta - \frac{1}{N} \sum_{i=0}^{N} \left[ \sum_{t=0}^{T-1} \nabla_\theta \log \pi_\theta(a_t|s_t) \sum_{k=0}^{\infty} \gamma^k r_{t+k+1} \right]$$
 
+# Aknowledgements
+
+- [OpenAI Gym](https://gym.openai.com/)
+- [Machine Learning with Phil](https://www.youtube.com/@MachineLearningwithPhil) (Thanks for your videos, they are very helpful and inspire me to do this repo)
