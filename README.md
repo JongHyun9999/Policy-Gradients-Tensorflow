@@ -8,3 +8,13 @@ This game is very simple and is not focus of this repo. So, our focus will be co
 
 # Algorithm and math
 ## 1) Probabilities of trajectory
+
+$$P(\tau|\pi) = P(s_0, a_0, s_1, a_1, ...|\pi)$$
+
+$$P(\tau|\pi) = P(s_0|\pi)P(a_0|s_0, \pi)P(s_1|s_0, a_0, \pi)P(a_1|s_1, \pi)P(s_2|s_1, a_1, \pi)P(a_2|s_2, \pi)...$$
+
+$$P(\tau|\pi) = \rho_0 (s_0) \prod_{t=0}^{T-1} P(s_{t+1} | s_t, a_t) \pi(a_t | s_t)$$
+
+\begin{equation}\label{prob_traj}
+    P(\tau|\pi) = \rho_0 (s_0) \prod_{t=0}^{T-1} P(s_{t+1} | s_t, a_t) \pi(a_t | s_t),
+\end{equation}
