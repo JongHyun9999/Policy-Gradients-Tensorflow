@@ -49,7 +49,7 @@ Lets enumarate some tricks that we will use to calculate gradient. First, we wil
 
 - $$\log P(\tau|\theta) = \log \rho_0 (s_0) + \sum_{t=0}^{T} \bigg( \log P(s_{t+1}|s_t, a_t)  + \log \pi_{\theta}(a_t |s_t)\bigg).$$
 
-- $$\nabla_{\theta} \log P(\tau | \theta) = \underbrace{\nabla_{\theta} \log \rho_0 (s_0)}_{=0}  + \sum_{t=0}^{T} \bigg( \underbrace{\nabla_{\theta} \log P(s_{t+1}|s_t, a_t)}_{=0} +\nabla_{\theta} \log \pi_{\theta}(a_t |s_t)\bigg)$$
+- $$\nabla_{\theta} \log P(\tau | \theta) = \nabla_{\theta} \log \pi_{\theta}(a_t |s_t)\bigg$$
 
 And then,
 
