@@ -41,7 +41,7 @@ $$G_t = \sum_{k=0}^{\infty} \gamma^k r_{t+k+1}$$
 
 where $\gamma \in (0, 1)$ is discount factor and $r_{t+k+1}$ is reward at time $t+k+1$
 
-## 3) Policy Gradient
+## 3) Policy Gradient Theorem
 
 Lets enumarate some tricks that we will use to calculate gradient. First, we will use chain rule:
 
@@ -49,13 +49,13 @@ Lets enumarate some tricks that we will use to calculate gradient. First, we wil
 
 - $$\log P(\tau|\theta) = \log \rho_0 (s_0) + \sum_{t=0}^{T} \bigg( \log P(s_{t+1}|s_t, a_t)  + \log \pi_{\theta}(a_t |s_t)\bigg).$$
 
-- $$\nabla_{\theta} \log P(\tau | \theta) &= \underbrace{\nabla_{\theta} \log \rho_0 (s_0)}_{=0}  + \sum_{t=0}^{T} \bigg( \underbrace{\nabla_{\theta} \log P(s_{t+1}|s_t, a_t)}_{=0}  + \nabla_{\theta} \log \pi_{\theta}(a_t |s_t)\bigg)$$
+- $$\nabla_{\theta} \log P(\tau | \theta) = \underbrace{\nabla_{\theta} \log \rho_0 (s_0)}_{=0}  + \sum_{t=0}^{T} \bigg( \underbrace{\nabla_{\theta} \log P(s_{t+1}|s_t, a_t)}_{=0} +\nabla_{\theta} \log \pi_{\theta}(a_t |s_t)\bigg)$$
 
 And then,
 
 $$\nabla_\theta J(\theta) = \mathbb{E}_{\tau \sim \pi_\theta} \left[ \sum_{t=0}^{T-1} \nabla_\theta \log \pi_\theta(a_t|s_t) G_t \right]$$
 
-## 4) Policy Gradient Theorem
+## 4) Gradient Descent Method:
 
 Finally, we want to compute in Gradient Descent method the following expression:
 
