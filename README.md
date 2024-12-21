@@ -1,5 +1,8 @@
 # Policy Gradient Implementation in Reinforcement Learning Repository
 
+> PPT : https://docs.google.com/presentation/d/1y4Izm6iyVBbw43wbNEUZ0T5sr9SAwPn_/edit?usp=sharing&ouid=109216185127626877008&rtpof=true&sd=true
+
+
 This repository features code implementing the policy gradient method in the field of reinforcement learning. 
 Experiments were conducted using the cartpole library from gym, and to facilitate foundational understanding, 
 only matrix operations supported by TensorFlow and the GradientTape feature were used, without resorting to Keras.
